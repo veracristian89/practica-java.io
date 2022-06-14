@@ -1,0 +1,2 @@
+primera linea via file Writer
+segunda linea via file Writer

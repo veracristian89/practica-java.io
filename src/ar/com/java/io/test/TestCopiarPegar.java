@@ -11,17 +11,20 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
 import java.io.Writer;
+import java.net.Socket;
 
 public class TestCopiarPegar {
 
 	public static void main(String[] args) throws IOException {
-
-		InputStream inputStream = System.in;
-		Reader inputStreamReader = new InputStreamReader(inputStream);
+		
+		Socket socket = new Socket();
+		
+		Reader inputStreamReader = new InputStreamReader(socket.getInputStream());
 		BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-		OutputStream fileOutputStream = new FileOutputStream("test-copia.txt");
-		Writer outputStreamReader = new OutputStreamWriter(fileOutputStream);
+		Socket socket2 = new Socket();
+		
+		Writer outputStreamReader = new OutputStreamWriter(socket2.getOutputStream());
 		BufferedWriter bufferedWriter = new BufferedWriter(outputStreamReader);
 
 
