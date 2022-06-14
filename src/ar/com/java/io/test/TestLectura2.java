@@ -11,7 +11,7 @@ public class TestLectura2 {
 		Scanner scanner = new Scanner(new File("archivo.csv"));
 		String linea = scanner.nextLine();
 		System.out.println(linea);
-		while ((linea = scanner.nextLine()) != null && scanner.hasNextLine()) {
+		while (scanner.hasNextLine() && ((linea = scanner.nextLine()) != null)) {
 			System.out.println(linea);
 		}
 	}
