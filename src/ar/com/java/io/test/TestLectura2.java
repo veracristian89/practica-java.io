@@ -16,7 +16,7 @@ public class TestLectura2 {
 			//usando split
 			String[] lineas = linea.split(",");
 			System.out.println(lineas);
-			System.out.println(String.format("%s", lineas));
+			System.out.println(Arrays.asList(lineas));
 //			System.out.println(lineas[1]);
 			
 			//usando scanner
